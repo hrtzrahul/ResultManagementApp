@@ -1,0 +1,66 @@
+ ### Installation
+
+
+    1. Navigate to the project directory:
+       ```bash
+       cd [NodeJS-ResultManagementSystem]
+       ```
+
+    2. Install the dependencies:
+       ```bash
+       npm install
+       ```
+
+    ### Database Setup
+
+    To run the application smoothly, you need to set up the database and tables. Follow these steps:
+
+    1. Create a new database named **demo2** in your DBMS.
+
+    2. Run the following queries to create the required tables:
+
+       - Teachers Table:
+         ```sql
+         CREATE TABLE demo.teachers (
+           teacherid VARCHAR(20) PRIMARY KEY,
+           password VARCHAR(25)
+         );
+         
+
+       - Students Table:
+         ```sql
+         CREATE TABLE demo.students (
+           roll NUMERIC PRIMARY KEY,
+           name VARCHAR(25),
+           date_of_birth DATE,
+           score NUMERIC
+         );
+         ```
+
+    3. Insert a teacher's login credentials:
+       ```sql
+       INSERT INTO demo.teachers (teacherid, password)
+       VALUES ('1234', 'abc123');
+      
+
+    ## Usage
+
+    ### Starting the Application
+
+    To start the application, run the following command:
+
+    ```bash
+    npm start
+    ```   
+
+    This will start the server, and you can access the application by navigating to `http://localhost:8000` in your web browser.
+
+    ### Logging in as a Teacher
+
+    To log in as a teacher, use the following credentials:
+    - Teacher ID: `1234`
+    - Password: `abc123`
+
+    ## Configuration
+
+    The application uses a `.env` file for configuration. You can find this file in the root directory of the project. Make sure to update the necessary environment variables before running the application.
